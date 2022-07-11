@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  alarm-ios
+
+  Created by Miguel on 17/07/22.
+  
+*/
+"monday" = "Lunes";
+"tuesday" = "Martes";
+"wednesday" = "Miercoles";
+"thursday" = "Jueves";
+"friday" = "Viernes";
+"saturday" = "Sabado";
+"sunday" = "Domingo";
+"repeat" = "Repetir";
+"never" = "Nunca";
+"cancel" = "Cancelar";
+"done" = "Hecho";
+"everyday" = "Todos los dias";
+"weekdays" = "Dias laborables";
+"weekend" = "Fines de semana";
+"day" = "Dia";
+"days" = "Dias";
+"song" = "Canción";
+"none" = "Ninguno";
+"classic" = "Clasico";
+"ringtone" = "Tono de Ring";
+"local" = "Local";
+"spotify" = "Spotify";
+"apple" = "Apple";

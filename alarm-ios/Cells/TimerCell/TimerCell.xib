@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="TimerCell" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TimerCell" customModule="alarm_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpO-7f-kbO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMz-mb-NkL">
+                                <rect key="frame" x="20" y="0.0" width="335" height="230"/>
+                            </pickerView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fMz-mb-NkL" secondAttribute="bottom" constant="20" id="83Z-Pz-81O"/>
+                            <constraint firstItem="fMz-mb-NkL" firstAttribute="leading" secondItem="cpO-7f-kbO" secondAttribute="leading" constant="20" id="eQ6-0T-HWF"/>
+                            <constraint firstAttribute="trailing" secondItem="fMz-mb-NkL" secondAttribute="trailing" constant="20" id="fkC-VC-D72"/>
+                            <constraint firstItem="fMz-mb-NkL" firstAttribute="top" secondItem="cpO-7f-kbO" secondAttribute="top" id="wG1-VD-jck"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="cpO-7f-kbO" secondAttribute="bottom" id="0Hf-tQ-Uo8"/>
+                    <constraint firstItem="cpO-7f-kbO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9b7-XT-t9s"/>
+                    <constraint firstAttribute="trailing" secondItem="cpO-7f-kbO" secondAttribute="trailing" id="Amg-09-2gJ"/>
+                    <constraint firstItem="cpO-7f-kbO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Yl2-rd-R4x"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="pickerView" destination="fMz-mb-NkL" id="tVA-Dr-LyE"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
