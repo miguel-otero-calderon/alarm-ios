@@ -8,18 +8,18 @@
 import UIKit
 protocol DaySelectViewControllerDelegate: AnyObject {
     func cancel()
-    func done(days:[String])
+    func done(days:[DayModel])
 }
 class DaySelectViewController: UIViewController {
     private lazy var containerView: UIView = setupContainerView()
     private lazy var tableView: UITableView = setupTableView()
 
     var cells: [CustomCell] = []
-    var days: [String]
+    var days: [DayModel]
     let cornerRadius: CGFloat = 20
     weak var delegate: DaySelectViewControllerDelegate?
     
-    init(days: [String], delegate: DaySelectViewControllerDelegate) {
+    init(days: [DayModel], delegate: DaySelectViewControllerDelegate) {
         self.days = days
         self.delegate = delegate
         super.init(nibName: .none, bundle: .none)
@@ -37,6 +37,20 @@ class DaySelectViewController: UIViewController {
         configCells()
         loadTable()
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with _: UIEvent?) {
+        let touch: UITouch? = touches.first
+        if touch?.view == view {
+            close()
+        }
+    }
+    func close() {
+        UIView.animate(withDuration: 0.5) {
+            self.view.alpha = .zero
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.dismiss(animated: true)
+        }
+    }
     func setupContainerView() -> UIView {
         let view = UIView()
         view.backgroundColor = UIColor.systemBackground
@@ -49,7 +63,7 @@ class DaySelectViewController: UIViewController {
     }
     func setupConstraints() {
         containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.heightAnchor.constraint(equalToConstant: 480).isActive = true
+        containerView.heightAnchor.constraint(equalToConstant: 420).isActive = true
         containerView.widthAnchor.constraint(equalToConstant: 300).isActive = true
         containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -80,9 +94,9 @@ class DaySelectViewController: UIViewController {
         cells = []
         cells.append(.titleCell(TitleCell.ViewModel(title: Localizable.repeat)))
         cells.append(.daysShortcut)
-        let daysData = DayUseCase.getDaysData(days: self.days)
-        for data in daysData {
-            cells.append(.dayCheck(data))
+        let days = GetDaysCheckViewModelUseCase().execute()
+        for day in days {
+            cells.append(.dayCheck(day))
         }
         cells.append(.cancelDoneCell(CancelDoneCellData(cancelTitle: Localizable.cancel, doneTitle: Localizable.done)))
     }
@@ -102,6 +116,7 @@ extension DaySelectViewController: UITableViewDataSource {
         switch custom {
         case .daysShortcut:
             let cell = tableView.dequeueReusableCell(withIdentifier: DaysShortcutCell.identifier, for: indexPath) as! DaysShortcutCell
+            cell.delegate = self
             return cell
         case .titleCell(let viewModel):
             let cell = tableView.dequeueReusableCell(withIdentifier: TitleCell.identifier, for: indexPath) as! TitleCell
@@ -145,10 +160,10 @@ extension DaySelectViewController: UITableViewDelegate {
 }
 extension DaySelectViewController: DayCheckCellDelegate {
     func dayCheckAction(viewModel: DayCheckCell.ViewModel) {
-        if viewModel.value {
-            days = DayUseCase.addDay(days: days, day: viewModel.day)
+        if viewModel.selected {
+            days = AddDayUseCase(days: days, addDay: viewModel.day).execute()
         } else {
-            days = DayUseCase.removeDay(days: days, day: viewModel.day)
+            days = RemoveDayUseCase(days: days, removeDay: viewModel.day).execute()
         }
     }
 }
@@ -161,5 +176,14 @@ extension DaySelectViewController: CancelDoneCellDelegate {
     func done(cell: CancelDoneCell) {
         self.delegate?.done(days: self.days)
         self.dismiss(animated: true)
+    }
+}
+extension DaySelectViewController: DaysShortcutCellDelegate {
+    func weekDaysAction() {
+        
+    }
+    
+    func weekEndsAction() {
+        
     }
 }

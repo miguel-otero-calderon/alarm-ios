@@ -11,12 +11,13 @@ protocol DayCheckCellDelegate {
 }
 class DayCheckCell: UITableViewCell {
     private lazy var containerView: UIView = setupContainerView()
-    private lazy var titleLabel: UILabel = setupTitleLabel()
+    private lazy var nameLabel: UILabel = setupNameLabel()
     private lazy var checkImage: UIImageView = setupCheckImage()
     private lazy var actionButton: UIButton = setupActionButton()
     var viewModel: DayCheckCell.ViewModel?
     var delegate: DayCheckCellDelegate?
-    
+    let check: UIImage? = UIImage(named: "check")
+    let uncheck: UIImage? = UIImage(named: "uncheck")
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -27,7 +28,7 @@ class DayCheckCell: UITableViewCell {
     }
     func setupView() {
         contentView.addSubview(containerView)
-        containerView.addSubview(titleLabel)
+        containerView.addSubview(nameLabel)
         containerView.addSubview(checkImage)
         containerView.addSubview(actionButton)
     }
@@ -38,10 +39,10 @@ class DayCheckCell: UITableViewCell {
         containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20).isActive = true
-        titleLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        nameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20).isActive = true
+        nameLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
         
         checkImage.translatesAutoresizingMaskIntoConstraints = false
         checkImage.heightAnchor.constraint(equalToConstant: 24).isActive = true
@@ -59,7 +60,7 @@ class DayCheckCell: UITableViewCell {
         let view = UIView()
         return view
     }
-    func setupTitleLabel() -> UILabel {
+    func setupNameLabel() -> UILabel {
         let label = UILabel()
         label.textAlignment = .center
         label.font = UIFont(name: "Nunito-Regular", size: 15)
@@ -78,33 +79,30 @@ class DayCheckCell: UITableViewCell {
     }
     func configure(viewModel: DayCheckCell.ViewModel) {
         self.viewModel = viewModel
-        self.titleLabel.text = viewModel.title
-        if viewModel.value {
-            self.checkImage.image = viewModel.check
+        self.nameLabel.text = viewModel.day.name
+        if viewModel.selected {
+            self.checkImage.image = check
         } else {
-            self.checkImage.image = viewModel.uncheck
+            self.checkImage.image = uncheck
         }
     }
     @objc func actionCell(_ sender: UIButton) {
         guard let viewModel = self.viewModel else {
             return
         }
-        if viewModel.value {
-            self.checkImage.image = viewModel.uncheck
+        if viewModel.selected {
+            self.checkImage.image = check
         } else {
-            self.checkImage.image = viewModel.check
+            self.checkImage.image = uncheck
         }
-        self.viewModel?.value = !viewModel.value
+        self.viewModel?.selected = !viewModel.selected
         self.delegate?.dayCheckAction(viewModel: viewModel)
     }
 }
 extension DayCheckCell {
     struct ViewModel {
-        let title: String
-        var value: Bool
-        let day: String
-        let check: UIImage
-        let uncheck: UIImage
+        let day: DayModel
+        var selected: Bool
     }
 }
 extension DayCheckCell: ProtocolCell {

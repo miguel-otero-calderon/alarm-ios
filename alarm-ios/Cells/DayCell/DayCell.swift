@@ -8,17 +8,14 @@
 import UIKit
 
 class DayCell: UITableViewCell {
-
-    //Outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var actionButton: UIButton!
-    //variables
+
     var data: DayCellData?
     var delegate: DayCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         resultLabel.textColor = UIColor.blue
     }
     

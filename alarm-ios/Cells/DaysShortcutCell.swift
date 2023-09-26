@@ -6,12 +6,15 @@
 //
 
 import UIKit
-
+protocol DaysShortcutCellDelegate: AnyObject {
+    func weekDaysAction()
+    func weekEndsAction()
+}
 class DaysShortcutCell: UITableViewCell {
     private lazy var containerView: UIView = setupContainerView()
     private lazy var weekDaysButton: UIButton = setupWeekDaysButton()
     private lazy var weekEndsButton: UIButton = setupWeekEndsButton()
-    
+    weak var delegate: DaysShortcutCellDelegate?
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -57,6 +60,7 @@ class DaysShortcutCell: UITableViewCell {
         button.layer.borderWidth = 0.5
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont(name: "Nunito-Regular", size: 15.0)
+        button.addTarget(self, action: #selector(weekEndsAction), for: .touchUpInside)
         return button
     }
     func setupWeekDaysButton() -> UIButton {
@@ -67,6 +71,7 @@ class DaysShortcutCell: UITableViewCell {
         button.layer.borderWidth = 0.5
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont(name: "Nunito-Regular", size: 15.0)
+        button.addTarget(self, action: #selector(weekDaysAction), for: .touchUpInside)
         return button
     }
     func setupContainerView() -> UIView {
@@ -77,6 +82,12 @@ class DaysShortcutCell: UITableViewCell {
         let label = UILabel()
         label.textAlignment = .center
         return label
+    }
+    @objc func weekDaysAction() {
+        delegate?.weekDaysAction()
+    }
+    @objc func weekEndsAction() {
+        delegate?.weekEndsAction()
     }
 }
 extension DaysShortcutCell: ProtocolCell {

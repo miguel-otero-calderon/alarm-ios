@@ -16,6 +16,11 @@
 		4C3457542884C591001F5637 /* DayCheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3457522884C591001F5637 /* DayCheckCell.swift */; };
 		4C351F082883DA4D003F39EF /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C351F062883DA4D003F39EF /* DayCell.swift */; };
 		4C351F092883DA4D003F39EF /* DayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C351F072883DA4D003F39EF /* DayCell.xib */; };
+		4C3B9C7F2AC2786A000CBF6D /* GetDaysUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B9C7E2AC2786A000CBF6D /* GetDaysUseCase.swift */; };
+		4C3B9C812AC2797D000CBF6D /* GetDaysViewModelUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B9C802AC2797D000CBF6D /* GetDaysViewModelUseCase.swift */; };
+		4C3B9C832AC27C72000CBF6D /* GetDaysTitleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B9C822AC27C72000CBF6D /* GetDaysTitleUseCase.swift */; };
+		4C3B9C852AC27FBB000CBF6D /* AddDayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B9C842AC27FBB000CBF6D /* AddDayUseCase.swift */; };
+		4C3B9C872AC28718000CBF6D /* RemoveDayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B9C862AC28718000CBF6D /* RemoveDayUseCase.swift */; };
 		4C43BA41288C056E003A987D /* SongUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43BA40288C056E003A987D /* SongUseCase.swift */; };
 		4C4F2F7D28D806E700F311B6 /* SettingSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F2F7B28D806E700F311B6 /* SettingSongCell.swift */; };
 		4C4F2F7E28D806E700F311B6 /* SettingSongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4F2F7C28D806E700F311B6 /* SettingSongCell.xib */; };
@@ -26,7 +31,7 @@
 		4C86EAFF2885822F00334394 /* CancelDoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C86EAFD2885822F00334394 /* CancelDoneCell.xib */; };
 		4CC99BA9288440D600C79B87 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC99BAB288440D600C79B87 /* Localizable.strings */; };
 		4CC99BAF2884435900C79B87 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC99BAE2884435900C79B87 /* Localizable.swift */; };
-		4CC99BB2288446CB00C79B87 /* DayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC99BB1288446CB00C79B87 /* DayUseCase.swift */; };
+		4CC99BB2288446CB00C79B87 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC99BB1288446CB00C79B87 /* DayModel.swift */; };
 		4CE55E382888EC0500FD7E60 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE55E362888EC0500FD7E60 /* SongCell.swift */; };
 		4CE55E392888EC0500FD7E60 /* SongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE55E372888EC0500FD7E60 /* SongCell.xib */; };
 		4CEB5671288234C400238D60 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEB5670288234C400238D60 /* Device.swift */; };
@@ -66,6 +71,11 @@
 		4C3457522884C591001F5637 /* DayCheckCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCheckCell.swift; sourceTree = "<group>"; };
 		4C351F062883DA4D003F39EF /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		4C351F072883DA4D003F39EF /* DayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayCell.xib; sourceTree = "<group>"; };
+		4C3B9C7E2AC2786A000CBF6D /* GetDaysUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDaysUseCase.swift; sourceTree = "<group>"; };
+		4C3B9C802AC2797D000CBF6D /* GetDaysViewModelUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDaysViewModelUseCase.swift; sourceTree = "<group>"; };
+		4C3B9C822AC27C72000CBF6D /* GetDaysTitleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDaysTitleUseCase.swift; sourceTree = "<group>"; };
+		4C3B9C842AC27FBB000CBF6D /* AddDayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDayUseCase.swift; sourceTree = "<group>"; };
+		4C3B9C862AC28718000CBF6D /* RemoveDayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveDayUseCase.swift; sourceTree = "<group>"; };
 		4C43BA40288C056E003A987D /* SongUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongUseCase.swift; sourceTree = "<group>"; };
 		4C4F2F7B28D806E700F311B6 /* SettingSongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSongCell.swift; sourceTree = "<group>"; };
 		4C4F2F7C28D806E700F311B6 /* SettingSongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingSongCell.xib; sourceTree = "<group>"; };
@@ -77,7 +87,7 @@
 		4CC99BAA288440D600C79B87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4CC99BAC288440F500C79B87 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4CC99BAE2884435900C79B87 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
-		4CC99BB1288446CB00C79B87 /* DayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayUseCase.swift; sourceTree = "<group>"; };
+		4CC99BB1288446CB00C79B87 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		4CE55E362888EC0500FD7E60 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		4CE55E372888EC0500FD7E60 /* SongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongCell.xib; sourceTree = "<group>"; };
 		4CEB5670288234C400238D60 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -210,14 +220,6 @@
 			path = CancelDoneCell;
 			sourceTree = "<group>";
 		};
-		4CC99BB0288446BC00C79B87 /* Day */ = {
-			isa = PBXGroup;
-			children = (
-				4CC99BB1288446CB00C79B87 /* DayUseCase.swift */,
-			);
-			path = Day;
-			sourceTree = "<group>";
-		};
 		4CE55E352888EBD400FD7E60 /* SongCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,9 +304,13 @@
 		4CEB569728827BEE00238D60 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				4C3B9C7E2AC2786A000CBF6D /* GetDaysUseCase.swift */,
+				4C3B9C822AC27C72000CBF6D /* GetDaysTitleUseCase.swift */,
+				4C3B9C802AC2797D000CBF6D /* GetDaysViewModelUseCase.swift */,
+				4C3B9C842AC27FBB000CBF6D /* AddDayUseCase.swift */,
+				4C3B9C862AC28718000CBF6D /* RemoveDayUseCase.swift */,
 				4CEB569828827BF900238D60 /* InitialViewControllerUseCase */,
 				4C43BA3F288C0555003A987D /* Song */,
-				4CC99BB0288446BC00C79B87 /* Day */,
 				4CEB569B28827D3B00238D60 /* Timer */,
 			);
 			path = UseCases;
@@ -365,6 +371,7 @@
 		4CF0794C287BF1820067FD12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4CC99BB1288446CB00C79B87 /* DayModel.swift */,
 				4CF0794D287BF1B10067FD12 /* User.swift */,
 				4CF07951287BF9A10067FD12 /* Song.swift */,
 				4CEB5670288234C400238D60 /* Device.swift */,
@@ -523,26 +530,31 @@
 				4C34574828844F11001F5637 /* DaySelectViewController.swift in Sources */,
 				4CEB569F2882A88300238D60 /* CustomCell.swift in Sources */,
 				4CC99BAF2884435900C79B87 /* Localizable.swift in Sources */,
+				4C3B9C872AC28718000CBF6D /* RemoveDayUseCase.swift in Sources */,
 				4CEB56752882351000238D60 /* Alarm.swift in Sources */,
 				4CEB567D2882701200238D60 /* AlarmSettingViewController.swift in Sources */,
 				4CF07940287BDECE0067FD12 /* alarm_ios.xcdatamodeld in Sources */,
+				4C3B9C852AC27FBB000CBF6D /* AddDayUseCase.swift in Sources */,
+				4C3B9C812AC2797D000CBF6D /* GetDaysViewModelUseCase.swift in Sources */,
 				4CF07936287BDECE0067FD12 /* AppDelegate.swift in Sources */,
 				4C2814F22AB9B05300E82BED /* DaysShortcutCell.swift in Sources */,
 				4CF0794E287BF1B10067FD12 /* User.swift in Sources */,
 				4C4F2F8728D81EFE00F311B6 /* GroupSongCell.swift in Sources */,
+				4C3B9C832AC27C72000CBF6D /* GetDaysTitleUseCase.swift in Sources */,
 				4C2F060328831C2500223D6F /* UIColor+Extension.swift in Sources */,
 				4CEB5671288234C400238D60 /* Device.swift in Sources */,
 				4C34574D2884BD97001F5637 /* TitleCell.swift in Sources */,
 				4CEB569D28827D4C00238D60 /* TimerUseCase.swift in Sources */,
 				4C351F082883DA4D003F39EF /* DayCell.swift in Sources */,
 				4CEB569A28827C3500238D60 /* InitialViewControllerUseCase.swift in Sources */,
+				4C3B9C7F2AC2786A000CBF6D /* GetDaysUseCase.swift in Sources */,
 				4CEB5673288234FB00238D60 /* Subcription.swift in Sources */,
 				4C86EAFE2885822F00334394 /* CancelDoneCell.swift in Sources */,
 				4CE55E382888EC0500FD7E60 /* SongCell.swift in Sources */,
 				4CF07938287BDECE0067FD12 /* SceneDelegate.swift in Sources */,
 				4C43BA41288C056E003A987D /* SongUseCase.swift in Sources */,
 				4CEB56842882742D00238D60 /* TimerCell.swift in Sources */,
-				4CC99BB2288446CB00C79B87 /* DayUseCase.swift in Sources */,
+				4CC99BB2288446CB00C79B87 /* DayModel.swift in Sources */,
 				4CEB56A32882AB2000238D60 /* ProtocolCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

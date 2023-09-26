@@ -12,7 +12,7 @@ class AlarmSettingViewController: UIViewController {
     private lazy var tableView: UITableView = setupTableView()
     
     var cells: [CustomCell] = []
-    var days:[String] = []
+    var days: [DayModel] = []
     var timer:Alarm.Time = TimerUseCase.getTimerDefault()
     var song:Song = SongUseCase.getSongDefault().first!
     
@@ -75,9 +75,11 @@ class AlarmSettingViewController: UIViewController {
         let timerCellData = TimerCellData(hour: timer.hour,
                                           minute: timer.minute,
                                           horario: timer.horario.rawValue)
-        let dayCellData = DayCellData(title: DayUseCase.getTitle(days: days) ,
-                                      result: DayUseCase.getDescription(days:days),
-                                      days: days)
+
+        let title = GetDaysTitleUseCase(days: days).execute()
+        let dayCellData = DayCellData(title: title,
+                                      result: "",
+                                      days: ["Monday","Tuesday","Wednesday"])
         let settingSongCellData = SettingSongCellData(title: Localizable.song,
                                                       song: nil)
         cells = [
@@ -161,7 +163,7 @@ extension AlarmSettingViewController: DaySelectViewControllerDelegate {
         
     }
     
-    func done(days: [String]) {
+    func done(days: [DayModel]) {
         self.days = days
         configCells()
         loadTable()
