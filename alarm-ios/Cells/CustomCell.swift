@@ -9,7 +9,7 @@ import Foundation
 
 enum CustomCell {
     case timerCell (TimerCellData)
-    case dayCell (DayCellData)
+    case dayCell (DayCell.ViewModel)
     case titleCell (TitleCell.ViewModel)
     case dayCheck (DayCheckCell.ViewModel)
     case cancelDoneCell (CancelDoneCellData)

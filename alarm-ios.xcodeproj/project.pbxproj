@@ -160,14 +160,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		4C34574528844EDC001F5637 /* DaySelect */ = {
-			isa = PBXGroup;
-			children = (
-				4C34574628844F11001F5637 /* DaySelectViewController.swift */,
-			);
-			path = DaySelect;
-			sourceTree = "<group>";
-		};
 		4C351F052883DA29003F39EF /* DayCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,20 +233,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		4CEB567928826EE300238D60 /* AlarmSetting */ = {
-			isa = PBXGroup;
-			children = (
-				4CEB567B2882701200238D60 /* AlarmSettingViewController.swift */,
-			);
-			path = AlarmSetting;
-			sourceTree = "<group>";
-		};
 		4CEB567A28826F1400238D60 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4CEB567B2882701200238D60 /* AlarmSettingViewController.swift */,
+				4C34574628844F11001F5637 /* DaySelectViewController.swift */,
 				4C4F2F7F28D81B6200F311B6 /* SettingSong */,
-				4C34574528844EDC001F5637 /* DaySelect */,
-				4CEB567928826EE300238D60 /* AlarmSetting */,
 			);
 			path = Modules;
 			sourceTree = "<group>";

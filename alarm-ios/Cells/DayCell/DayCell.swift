@@ -6,14 +6,17 @@
 //
 
 import UIKit
-
+protocol DayCellDelegate {
+    func action(cell:DayCell)
+}
 class DayCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var actionButton: UIButton!
 
-    var data: DayCellData?
+    var viewModel: DayCell.ViewModel?
     var delegate: DayCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         resultLabel.textColor = UIColor.blue
@@ -23,22 +26,19 @@ class DayCell: UITableViewCell {
         delegate?.action(cell: self)
     }
     
-    func configure(data: DayCellData) {
-        self.titleLabel.text = data.title
-        self.resultLabel.text = data.result
-        self.data = data
+    func configure(viewModel: ViewModel) {
+        self.titleLabel.text = viewModel.title
+        self.resultLabel.text = viewModel.result
+        self.viewModel = viewModel
+    }
+    struct ViewModel {
+        let title: String
+        let result: String
+        let days: [String]
     }
 }
 
 extension DayCell: ProtocolCell {
     static var identifier: String { return "DayCell" }
     static var heightCustom: CGFloat { return 50 }
-}
-struct DayCellData {
-    let title: String
-    let result: String
-    let days: [String]
-}
-protocol DayCellDelegate {
-    func action(cell:DayCell)
 }

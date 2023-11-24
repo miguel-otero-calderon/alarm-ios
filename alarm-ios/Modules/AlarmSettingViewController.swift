@@ -77,7 +77,7 @@ class AlarmSettingViewController: UIViewController {
                                           horario: timer.horario.rawValue)
 
         let title = GetDaysTitleUseCase(days: days).execute()
-        let dayCellData = DayCellData(title: title,
+        let dayCellData = DayCell.ViewModel(title: title,
                                       result: "",
                                       days: ["Monday","Tuesday","Wednesday"])
         let settingSongCellData = SettingSongCellData(title: Localizable.song,
@@ -115,9 +115,9 @@ extension AlarmSettingViewController: UITableViewDataSource {
             cell.selectionStyle = .none
             cell.delegate = self
             return cell
-        case .dayCell(let data):
+        case .dayCell(let viewModel):
             let cell = tableView.dequeueReusableCell(withIdentifier: DayCell.identifier, for: indexPath) as! DayCell
-            cell.configure(data: data)
+            cell.configure(viewModel: viewModel)
             cell.selectionStyle = .none
             cell.delegate = self
             return cell
