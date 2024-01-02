@@ -1,44 +1,42 @@
 import SwiftUI
 
 struct BlackoutView: View {
+    @ObservedObject var viewModel: BlackoutViewModel
     var body: some View {
         VStack {
-            Image("blackoutBackgorund")
+            Image(BlackoutViewConstants.blackoutBackgorund)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(height: 207)
+                .frame(height: BlackoutViewConstants.headerHeight)
 
-            Image("blackoutImage")
+            Image(BlackoutViewConstants.blackoutImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 123, height: 123)
-                .padding(.top, -60)
+                .frame(width: BlackoutViewConstants.iconWidth, height: BlackoutViewConstants.iconHeight)
+                .padding(.top, BlackoutViewConstants.iconTop)
 
-            Text("Nuestra app está en mantención")
-                .font(.custom("SourceSansPro-Bold", size: 22))
-                .foregroundColor(Color("greenJumbo"))
-                .padding(.top, 49)
-                .padding(.horizontal, 16)
+            Text(viewModel.title)
+                .font(.sourceSansProBold(size: BlackoutViewConstants.Title.fontSize))
+                .foregroundColor(Color.greenJumbo)
+                .padding(.top, BlackoutViewConstants.Title.top)
+                .padding(.horizontal, BlackoutViewConstants.Title.horizontal)
 
-            Text("Porque queremos entregarte siempre un buen servicio, estamos trabajando para mejorar tu experiencia de compra.")
-                .font(.custom("SourceSansPro-Regular", size: 16))
-                .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
-                .padding([.top, .horizontal], 16)
+            Text(viewModel.message)
+                .font(.sourceSansProRegular(size: BlackoutViewConstants.Message.fontSize))
+                .foregroundColor(Color.blackJumbo)
+                .padding([.top, .horizontal], BlackoutViewConstants.Message.horizontal)
 
-            Text("Pronto estará disponible.")
-                .font(.custom("SourceSansPro-Bold", size: 16))
-                .padding(.top, 24)
-                .padding(.horizontal, 16)
+            Text(viewModel.footer)
+                .font(.sourceSansProBold(size: BlackoutViewConstants.Footer.fontSize))
+                .padding(.top, BlackoutViewConstants.Footer.top)
+                .padding(.horizontal, BlackoutViewConstants.Footer.horizontal)
             
             Spacer()
         }
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .background(Color("systemBackgroundColor"))
+        .frame(minWidth: .zero, maxWidth: .infinity, minHeight: .zero, maxHeight: .infinity)
+        .background(Color.systemBackgroundColor)
         .edgesIgnoringSafeArea(.all)
     }
 }
 
-#Preview {
-    BlackoutView()
-}
 

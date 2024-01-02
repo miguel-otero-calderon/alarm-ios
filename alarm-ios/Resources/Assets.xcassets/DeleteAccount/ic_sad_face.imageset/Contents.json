@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_sad_face.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -29,6 +29,11 @@
 		4C4F2F8828D81EFE00F311B6 /* GroupSongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4F2F8628D81EFE00F311B6 /* GroupSongCell.xib */; };
 		4C86EAFE2885822F00334394 /* CancelDoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C86EAFC2885822F00334394 /* CancelDoneCell.swift */; };
 		4C86EAFF2885822F00334394 /* CancelDoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C86EAFD2885822F00334394 /* CancelDoneCell.xib */; };
+		4C9D26BC2B44B96400536686 /* BlackoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D26BB2B44B96400536686 /* BlackoutViewModel.swift */; };
+		4C9D26BE2B44B98D00536686 /* BlackoutViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D26BD2B44B98D00536686 /* BlackoutViewConstants.swift */; };
+		4C9D26C02B44B9F600536686 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D26BF2B44B9F600536686 /* Font+Extension.swift */; };
+		4C9D26C22B44BA2800536686 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D26C12B44BA2800536686 /* Color+Extension.swift */; };
+		4C9D26C42B44BA4E00536686 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D26C32B44BA4E00536686 /* UIColor+Extensions.swift */; };
 		4CC99BA9288440D600C79B87 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC99BAB288440D600C79B87 /* Localizable.strings */; };
 		4CC99BAF2884435900C79B87 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC99BAE2884435900C79B87 /* Localizable.swift */; };
 		4CC99BB2288446CB00C79B87 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC99BB1288446CB00C79B87 /* DayModel.swift */; };
@@ -115,6 +120,11 @@
 		4C4F2F8628D81EFE00F311B6 /* GroupSongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupSongCell.xib; sourceTree = "<group>"; };
 		4C86EAFC2885822F00334394 /* CancelDoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelDoneCell.swift; sourceTree = "<group>"; };
 		4C86EAFD2885822F00334394 /* CancelDoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CancelDoneCell.xib; sourceTree = "<group>"; };
+		4C9D26BB2B44B96400536686 /* BlackoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackoutViewModel.swift; sourceTree = "<group>"; };
+		4C9D26BD2B44B98D00536686 /* BlackoutViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackoutViewConstants.swift; sourceTree = "<group>"; };
+		4C9D26BF2B44B9F600536686 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		4C9D26C12B44BA2800536686 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		4C9D26C32B44BA4E00536686 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		4CC99BAA288440D600C79B87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4CC99BAC288440F500C79B87 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4CC99BAE2884435900C79B87 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
@@ -219,6 +229,9 @@
 				4C2F060228831C2500223D6F /* UIColor+Extension.swift */,
 				4C2814EF2AB9A8DC00E82BED /* UIViewController+Extension.swift */,
 				4CCF2F9A2B437213003FCCF3 /* String+Extension.swift */,
+				4C9D26BF2B44B9F600536686 /* Font+Extension.swift */,
+				4C9D26C12B44BA2800536686 /* Color+Extension.swift */,
+				4C9D26C32B44BA4E00536686 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -288,6 +301,8 @@
 			isa = PBXGroup;
 			children = (
 				4CCF2FA32B43A24A003FCCF3 /* BlackoutView.swift */,
+				4C9D26BB2B44B96400536686 /* BlackoutViewModel.swift */,
+				4C9D26BD2B44B98D00536686 /* BlackoutViewConstants.swift */,
 			);
 			path = Blackout;
 			sourceTree = "<group>";
@@ -621,12 +636,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF07952287BF9A10067FD12 /* Song.swift in Sources */,
+				4C9D26C22B44BA2800536686 /* Color+Extension.swift in Sources */,
 				4C3457542884C591001F5637 /* DayCheckCell.swift in Sources */,
 				4C4F2F8228D81C0000F311B6 /* SettingSongModalViewController.swift in Sources */,
 				4C4F2F7D28D806E700F311B6 /* SettingSongCell.swift in Sources */,
 				4C2814F02AB9A8DC00E82BED /* UIViewController+Extension.swift in Sources */,
 				4C34574828844F11001F5637 /* DaySelectViewController.swift in Sources */,
 				4CEB569F2882A88300238D60 /* CustomCell.swift in Sources */,
+				4C9D26C02B44B9F600536686 /* Font+Extension.swift in Sources */,
 				4CC99BAF2884435900C79B87 /* Localizable.swift in Sources */,
 				4C3B9C872AC28718000CBF6D /* RemoveDayUseCase.swift in Sources */,
 				4CEB56752882351000238D60 /* Alarm.swift in Sources */,
@@ -643,6 +660,7 @@
 				4C3B9C832AC27C72000CBF6D /* GetDaysTitleUseCase.swift in Sources */,
 				4C2F060328831C2500223D6F /* UIColor+Extension.swift in Sources */,
 				4CEB5671288234C400238D60 /* Device.swift in Sources */,
+				4C9D26BC2B44B96400536686 /* BlackoutViewModel.swift in Sources */,
 				4CCF2F992B437194003FCCF3 /* Blackout.swift in Sources */,
 				4C34574D2884BD97001F5637 /* TitleCell.swift in Sources */,
 				4CEB569D28827D4C00238D60 /* TimerUseCase.swift in Sources */,
@@ -651,9 +669,11 @@
 				4C3B9C7F2AC2786A000CBF6D /* GetDaysUseCase.swift in Sources */,
 				4CEB5673288234FB00238D60 /* Subcription.swift in Sources */,
 				4C86EAFE2885822F00334394 /* CancelDoneCell.swift in Sources */,
+				4C9D26C42B44BA4E00536686 /* UIColor+Extensions.swift in Sources */,
 				4CE55E382888EC0500FD7E60 /* SongCell.swift in Sources */,
 				4CF07938287BDECE0067FD12 /* SceneDelegate.swift in Sources */,
 				4C43BA41288C056E003A987D /* SongUseCase.swift in Sources */,
+				4C9D26BE2B44B98D00536686 /* BlackoutViewConstants.swift in Sources */,
 				4CEB56842882742D00238D60 /* TimerCell.swift in Sources */,
 				4CCF2F9B2B437213003FCCF3 /* String+Extension.swift in Sources */,
 				4CC99BB2288446CB00C79B87 /* DayModel.swift in Sources */,

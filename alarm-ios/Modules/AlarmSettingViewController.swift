@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import SwiftUI
 
 class AlarmSettingViewController: UIViewController {
     private lazy var containerView: UIView = setupContainerView()
@@ -35,17 +36,51 @@ class AlarmSettingViewController: UIViewController {
         
         FirebaseManager.shared.$blackoutData
             .receive(on: RunLoop.main)
-            .sink { [weak self] blackoutData in
-                if let data = blackoutData {
-                    if data.enable {
-                        
+            .sink {blackout in
+                if let blackout = blackout {
+                    if blackout.enable {
+                        let blackoutViewModel = BlackoutViewModel(enable: blackout.enable,
+                                                                  title: blackout.title,
+                                                                  message: blackout.message,
+                                                                  footer: blackout.footer)
+                        self.addBlackoutView(controller: self, timeInterval: 1, viewModel: blackoutViewModel)
                     } else {
-                        
+                        self.removeBlackoutView(controller: self)
                     }
                 }
             }
             .store(in: &subscriptions)
     }
+    
+    func addBlackoutView(controller: UIViewController, timeInterval: TimeInterval, viewModel: BlackoutViewModel?) {
+        UIView.animate(withDuration: timeInterval, animations: {
+            controller.navigationController?.isNavigationBarHidden = true
+            controller.tabBarController?.tabBar.isHidden = true
+        }, completion: { _ in
+            var blackoutViewModel = BlackoutViewModel(enable: BlackoutViewConstants.DefaultValue.enable,
+                                                      title: BlackoutViewConstants.DefaultValue.title,
+                                                      message: BlackoutViewConstants.DefaultValue.message,
+                                                      footer: BlackoutViewConstants.DefaultValue.footer)
+            if let viewModel = viewModel {
+                blackoutViewModel = viewModel
+            }
+            let blackoutView = UIHostingController(rootView: BlackoutView(viewModel: blackoutViewModel))
+            controller.addChild(blackoutView)
+            blackoutView.view.frame = UIScreen.main.bounds
+            controller.view.addSubview(blackoutView.view)
+            controller.view.bringSubviewToFront(blackoutView.view)
+            blackoutView.didMove(toParent: controller)
+        })
+    }
+    
+    func removeBlackoutView(controller: UIViewController) {
+        if let hostingController = controller.children.first(where: { $0 is UIHostingController<BlackoutView> }) as? UIHostingController<BlackoutView> {
+            hostingController.willMove(toParent: nil)
+            hostingController.view.removeFromSuperview()
+            hostingController.removeFromParent()
+        }
+    }
+    
     func setupView() {
         view.addSubview(containerView)
         containerView.addSubview(tableView)
