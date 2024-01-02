@@ -30,5 +30,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:543362315044:ios:b369ce550bbb7eac7779b1</string>
+	<key>DATABASE_URL</key>
+	<string>https://alarm-ios-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

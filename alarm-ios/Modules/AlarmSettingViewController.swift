@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Combine
 
 class AlarmSettingViewController: UIViewController {
     private lazy var containerView: UIView = setupContainerView()
     private lazy var tableView: UITableView = setupTableView()
+    private var subscriptions = Set<AnyCancellable>()
     
     var cells: [CustomCell] = []
     var days: [DayModel] = []
@@ -30,6 +32,19 @@ class AlarmSettingViewController: UIViewController {
         configTable()
         configCells()
         loadTable()
+        
+        FirebaseManager.shared.$blackoutData
+            .receive(on: RunLoop.main)
+            .sink { [weak self] blackoutData in
+                if let data = blackoutData {
+                    if data.enable {
+                        
+                    } else {
+                        
+                    }
+                }
+            }
+            .store(in: &subscriptions)
     }
     func setupView() {
         view.addSubview(containerView)
