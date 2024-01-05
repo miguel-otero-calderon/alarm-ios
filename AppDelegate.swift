@@ -12,9 +12,11 @@ import FirebaseDatabase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var addBlackoutUseCase: AddBlackoutUseCaseProtocol?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        FirebaseManager.shared.startObserving()
+        addBlackoutUseCase = BlackoutContainer.shared.addBlackoutUseCase()
+        addBlackoutUseCase?.execute()
         return true
     }
 

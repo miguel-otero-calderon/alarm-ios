@@ -7,6 +7,7 @@ enum BlackoutViewConstants {
     static let iconWidth: CGFloat = 123
     static let iconHeight: CGFloat = 123
     static let iconTop: CGFloat = -60
+    static let className = "BlackoutView"
     
     enum Title {
         static let fontSize: CGFloat = 22

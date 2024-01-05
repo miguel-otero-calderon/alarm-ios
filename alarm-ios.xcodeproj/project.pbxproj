@@ -27,10 +27,21 @@
 		4C4F2F8228D81C0000F311B6 /* SettingSongModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F2F8028D81BFF00F311B6 /* SettingSongModalViewController.swift */; };
 		4C4F2F8728D81EFE00F311B6 /* GroupSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F2F8528D81EFE00F311B6 /* GroupSongCell.swift */; };
 		4C4F2F8828D81EFE00F311B6 /* GroupSongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4F2F8628D81EFE00F311B6 /* GroupSongCell.xib */; };
+		4C8021ED2B484650001E1262 /* BlackoutContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8021DB2B484650001E1262 /* BlackoutContainer.swift */; };
+		4C8021EE2B484650001E1262 /* BlackoutRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8021DE2B484650001E1262 /* BlackoutRemoteDataSource.swift */; };
+		4C8021EF2B484650001E1262 /* BlackoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8021E02B484650001E1262 /* BlackoutRepository.swift */; };
+		4C8021F02B484650001E1262 /* BlackoutRemoteDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8021E22B484650001E1262 /* BlackoutRemoteDataSourceProtocol.swift */; };
+		4C8021F12B484650001E1262 /* BlackoutRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8021E32B484650001E1262 /* BlackoutRepositoryProtocol.swift */; };
+		4C8021F22B484650001E1262 /* AddBlackoutUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8021E42B484650001E1262 /* AddBlackoutUseCaseProtocol.swift */; };
+		4C8021F32B484650001E1262 /* AddBlackoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8021E62B484650001E1262 /* AddBlackoutUseCase.swift */; };
+		4C8021F42B484650001E1262 /* BlackoutViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8021E92B484650001E1262 /* BlackoutViewConstants.swift */; };
+		4C8021F52B484650001E1262 /* BlackoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8021EA2B484650001E1262 /* BlackoutViewModel.swift */; };
+		4C8021F62B484650001E1262 /* BlackoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8021EB2B484650001E1262 /* BlackoutView.swift */; };
+		4C8021F72B484650001E1262 /* BlackoutViewHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8021EC2B484650001E1262 /* BlackoutViewHostingController.swift */; };
+		4C8021FA2B48477D001E1262 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 4C8021F92B48477D001E1262 /* Factory */; };
+		4C8021FC2B4847B4001E1262 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8021FB2B4847B4001E1262 /* UIApplication+Extension.swift */; };
 		4C86EAFE2885822F00334394 /* CancelDoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C86EAFC2885822F00334394 /* CancelDoneCell.swift */; };
 		4C86EAFF2885822F00334394 /* CancelDoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C86EAFD2885822F00334394 /* CancelDoneCell.xib */; };
-		4C9D26BC2B44B96400536686 /* BlackoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D26BB2B44B96400536686 /* BlackoutViewModel.swift */; };
-		4C9D26BE2B44B98D00536686 /* BlackoutViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D26BD2B44B98D00536686 /* BlackoutViewConstants.swift */; };
 		4C9D26C02B44B9F600536686 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D26BF2B44B9F600536686 /* Font+Extension.swift */; };
 		4C9D26C22B44BA2800536686 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D26C12B44BA2800536686 /* Color+Extension.swift */; };
 		4C9D26C42B44BA4E00536686 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D26C32B44BA4E00536686 /* UIColor+Extensions.swift */; };
@@ -68,7 +79,6 @@
 		4CCF2F9B2B437213003FCCF3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCF2F9A2B437213003FCCF3 /* String+Extension.swift */; };
 		4CCF2F9D2B437603003FCCF3 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCF2F9C2B437603003FCCF3 /* FirebaseManager.swift */; };
 		4CCF2FA12B437BB8003FCCF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CCF2FA02B437BB8003FCCF3 /* GoogleService-Info.plist */; };
-		4CCF2FA42B43A24A003FCCF3 /* BlackoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCF2FA32B43A24A003FCCF3 /* BlackoutView.swift */; };
 		4CE55E382888EC0500FD7E60 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE55E362888EC0500FD7E60 /* SongCell.swift */; };
 		4CE55E392888EC0500FD7E60 /* SongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE55E372888EC0500FD7E60 /* SongCell.xib */; };
 		4CEB5671288234C400238D60 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEB5670288234C400238D60 /* Device.swift */; };
@@ -118,10 +128,20 @@
 		4C4F2F8028D81BFF00F311B6 /* SettingSongModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSongModalViewController.swift; sourceTree = "<group>"; };
 		4C4F2F8528D81EFE00F311B6 /* GroupSongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSongCell.swift; sourceTree = "<group>"; };
 		4C4F2F8628D81EFE00F311B6 /* GroupSongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupSongCell.xib; sourceTree = "<group>"; };
+		4C8021DB2B484650001E1262 /* BlackoutContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackoutContainer.swift; sourceTree = "<group>"; };
+		4C8021DE2B484650001E1262 /* BlackoutRemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackoutRemoteDataSource.swift; sourceTree = "<group>"; };
+		4C8021E02B484650001E1262 /* BlackoutRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackoutRepository.swift; sourceTree = "<group>"; };
+		4C8021E22B484650001E1262 /* BlackoutRemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackoutRemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
+		4C8021E32B484650001E1262 /* BlackoutRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackoutRepositoryProtocol.swift; sourceTree = "<group>"; };
+		4C8021E42B484650001E1262 /* AddBlackoutUseCaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBlackoutUseCaseProtocol.swift; sourceTree = "<group>"; };
+		4C8021E62B484650001E1262 /* AddBlackoutUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBlackoutUseCase.swift; sourceTree = "<group>"; };
+		4C8021E92B484650001E1262 /* BlackoutViewConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackoutViewConstants.swift; sourceTree = "<group>"; };
+		4C8021EA2B484650001E1262 /* BlackoutViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackoutViewModel.swift; sourceTree = "<group>"; };
+		4C8021EB2B484650001E1262 /* BlackoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackoutView.swift; sourceTree = "<group>"; };
+		4C8021EC2B484650001E1262 /* BlackoutViewHostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackoutViewHostingController.swift; sourceTree = "<group>"; };
+		4C8021FB2B4847B4001E1262 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		4C86EAFC2885822F00334394 /* CancelDoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelDoneCell.swift; sourceTree = "<group>"; };
 		4C86EAFD2885822F00334394 /* CancelDoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CancelDoneCell.xib; sourceTree = "<group>"; };
-		4C9D26BB2B44B96400536686 /* BlackoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackoutViewModel.swift; sourceTree = "<group>"; };
-		4C9D26BD2B44B98D00536686 /* BlackoutViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackoutViewConstants.swift; sourceTree = "<group>"; };
 		4C9D26BF2B44B9F600536686 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		4C9D26C12B44BA2800536686 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		4C9D26C32B44BA4E00536686 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
@@ -133,7 +153,6 @@
 		4CCF2F9A2B437213003FCCF3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		4CCF2F9C2B437603003FCCF3 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		4CCF2FA02B437BB8003FCCF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4CCF2FA32B43A24A003FCCF3 /* BlackoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackoutView.swift; sourceTree = "<group>"; };
 		4CE55E362888EC0500FD7E60 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		4CE55E372888EC0500FD7E60 /* SongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongCell.xib; sourceTree = "<group>"; };
 		4CEB5670288234C400238D60 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -195,6 +214,7 @@
 				4CCF2F8C2B4369CD003FCCF3 /* FirebaseRemoteConfig in Frameworks */,
 				4CCF2F902B4369CD003FCCF3 /* FirebaseStorage in Frameworks */,
 				4CCF2F702B4369CD003FCCF3 /* FirebaseDatabase in Frameworks */,
+				4C8021FA2B48477D001E1262 /* Factory in Frameworks */,
 				4CCF2F922B4369CD003FCCF3 /* FirebaseStorageCombine-Community in Frameworks */,
 				447DC0E0063D83170F0B8827 /* Pods_alarm_ios.framework in Frameworks */,
 				4CCF2F6A2B4369CD003FCCF3 /* FirebaseAuth in Frameworks */,
@@ -232,6 +252,7 @@
 				4C9D26BF2B44B9F600536686 /* Font+Extension.swift */,
 				4C9D26C12B44BA2800536686 /* Color+Extension.swift */,
 				4C9D26C32B44BA4E00536686 /* UIColor+Extensions.swift */,
+				4C8021FB2B4847B4001E1262 /* UIApplication+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -279,6 +300,104 @@
 			path = GroupSongCell;
 			sourceTree = "<group>";
 		};
+		4C8021D72B484638001E1262 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				4C8021D82B484650001E1262 /* Blackout */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		4C8021D82B484650001E1262 /* Blackout */ = {
+			isa = PBXGroup;
+			children = (
+				4C8021D92B484650001E1262 /* Framework */,
+				4C8021DC2B484650001E1262 /* Data */,
+				4C8021E52B484650001E1262 /* UseCase */,
+				4C8021E72B484650001E1262 /* Presentation */,
+			);
+			path = Blackout;
+			sourceTree = "<group>";
+		};
+		4C8021D92B484650001E1262 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				4C8021DA2B484650001E1262 /* DI */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		4C8021DA2B484650001E1262 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				4C8021DB2B484650001E1262 /* BlackoutContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		4C8021DC2B484650001E1262 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4C8021DD2B484650001E1262 /* DataSource */,
+				4C8021DF2B484650001E1262 /* Repository */,
+				4C8021E12B484650001E1262 /* Protocol */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4C8021DD2B484650001E1262 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				4C8021DE2B484650001E1262 /* BlackoutRemoteDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		4C8021DF2B484650001E1262 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				4C8021E02B484650001E1262 /* BlackoutRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		4C8021E12B484650001E1262 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				4C8021E22B484650001E1262 /* BlackoutRemoteDataSourceProtocol.swift */,
+				4C8021E32B484650001E1262 /* BlackoutRepositoryProtocol.swift */,
+				4C8021E42B484650001E1262 /* AddBlackoutUseCaseProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		4C8021E52B484650001E1262 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				4C8021E62B484650001E1262 /* AddBlackoutUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		4C8021E72B484650001E1262 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4C8021E82B484650001E1262 /* Strings */,
+				4C8021EA2B484650001E1262 /* BlackoutViewModel.swift */,
+				4C8021EB2B484650001E1262 /* BlackoutView.swift */,
+				4C8021EC2B484650001E1262 /* BlackoutViewHostingController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4C8021E82B484650001E1262 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				4C8021E92B484650001E1262 /* BlackoutViewConstants.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
 		4C86EAFB2885813B00334394 /* CancelDoneCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,16 +414,6 @@
 				4CCF2F982B437194003FCCF3 /* Blackout.swift */,
 			);
 			path = Firebase;
-			sourceTree = "<group>";
-		};
-		4CCF2FA22B43A23B003FCCF3 /* Blackout */ = {
-			isa = PBXGroup;
-			children = (
-				4CCF2FA32B43A24A003FCCF3 /* BlackoutView.swift */,
-				4C9D26BB2B44B96400536686 /* BlackoutViewModel.swift */,
-				4C9D26BD2B44B98D00536686 /* BlackoutViewConstants.swift */,
-			);
-			path = Blackout;
 			sourceTree = "<group>";
 		};
 		4CE55E352888EBD400FD7E60 /* SongCell */ = {
@@ -434,7 +543,7 @@
 		4CF07934287BDECE0067FD12 /* alarm-ios */ = {
 			isa = PBXGroup;
 			children = (
-				4CCF2FA22B43A23B003FCCF3 /* Blackout */,
+				4C8021D72B484638001E1262 /* Features */,
 				4CCF2F952B436FA8003FCCF3 /* Firebase */,
 				4C2F060028831C0900223D6F /* Utils */,
 				4CEB569728827BEE00238D60 /* UseCases */,
@@ -517,6 +626,7 @@
 				4CCF2F8D2B4369CD003FCCF3 /* FirebaseRemoteConfigSwift */,
 				4CCF2F8F2B4369CD003FCCF3 /* FirebaseStorage */,
 				4CCF2F912B4369CD003FCCF3 /* FirebaseStorageCombine-Community */,
+				4C8021F92B48477D001E1262 /* Factory */,
 			);
 			productName = "alarm-ios";
 			productReference = 4CF07932287BDECE0067FD12 /* alarm-ios.app */;
@@ -550,6 +660,7 @@
 			mainGroup = 4CF07929287BDECE0067FD12;
 			packageReferences = (
 				4CCF2F5C2B4369CD003FCCF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				4C8021F82B48477D001E1262 /* XCRemoteSwiftPackageReference "Factory" */,
 			);
 			productRefGroup = 4CF07933287BDECE0067FD12 /* Products */;
 			projectDirPath = "";
@@ -636,7 +747,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF07952287BF9A10067FD12 /* Song.swift in Sources */,
+				4C8021EF2B484650001E1262 /* BlackoutRepository.swift in Sources */,
 				4C9D26C22B44BA2800536686 /* Color+Extension.swift in Sources */,
+				4C8021F42B484650001E1262 /* BlackoutViewConstants.swift in Sources */,
 				4C3457542884C591001F5637 /* DayCheckCell.swift in Sources */,
 				4C4F2F8228D81C0000F311B6 /* SettingSongModalViewController.swift in Sources */,
 				4C4F2F7D28D806E700F311B6 /* SettingSongCell.swift in Sources */,
@@ -652,30 +765,37 @@
 				4C3B9C852AC27FBB000CBF6D /* AddDayUseCase.swift in Sources */,
 				4C3B9C812AC2797D000CBF6D /* GetDaysViewModelUseCase.swift in Sources */,
 				4CF07936287BDECE0067FD12 /* AppDelegate.swift in Sources */,
+				4C8021F72B484650001E1262 /* BlackoutViewHostingController.swift in Sources */,
 				4C2814F22AB9B05300E82BED /* DaysShortcutCell.swift in Sources */,
-				4CCF2FA42B43A24A003FCCF3 /* BlackoutView.swift in Sources */,
 				4CF0794E287BF1B10067FD12 /* User.swift in Sources */,
 				4CCF2F9D2B437603003FCCF3 /* FirebaseManager.swift in Sources */,
 				4C4F2F8728D81EFE00F311B6 /* GroupSongCell.swift in Sources */,
+				4C8021F22B484650001E1262 /* AddBlackoutUseCaseProtocol.swift in Sources */,
 				4C3B9C832AC27C72000CBF6D /* GetDaysTitleUseCase.swift in Sources */,
 				4C2F060328831C2500223D6F /* UIColor+Extension.swift in Sources */,
+				4C8021EE2B484650001E1262 /* BlackoutRemoteDataSource.swift in Sources */,
 				4CEB5671288234C400238D60 /* Device.swift in Sources */,
-				4C9D26BC2B44B96400536686 /* BlackoutViewModel.swift in Sources */,
 				4CCF2F992B437194003FCCF3 /* Blackout.swift in Sources */,
 				4C34574D2884BD97001F5637 /* TitleCell.swift in Sources */,
 				4CEB569D28827D4C00238D60 /* TimerUseCase.swift in Sources */,
 				4C351F082883DA4D003F39EF /* DayCell.swift in Sources */,
+				4C8021ED2B484650001E1262 /* BlackoutContainer.swift in Sources */,
 				4CEB569A28827C3500238D60 /* InitialViewControllerUseCase.swift in Sources */,
 				4C3B9C7F2AC2786A000CBF6D /* GetDaysUseCase.swift in Sources */,
 				4CEB5673288234FB00238D60 /* Subcription.swift in Sources */,
 				4C86EAFE2885822F00334394 /* CancelDoneCell.swift in Sources */,
+				4C8021FC2B4847B4001E1262 /* UIApplication+Extension.swift in Sources */,
+				4C8021F02B484650001E1262 /* BlackoutRemoteDataSourceProtocol.swift in Sources */,
+				4C8021F52B484650001E1262 /* BlackoutViewModel.swift in Sources */,
 				4C9D26C42B44BA4E00536686 /* UIColor+Extensions.swift in Sources */,
 				4CE55E382888EC0500FD7E60 /* SongCell.swift in Sources */,
 				4CF07938287BDECE0067FD12 /* SceneDelegate.swift in Sources */,
 				4C43BA41288C056E003A987D /* SongUseCase.swift in Sources */,
-				4C9D26BE2B44B98D00536686 /* BlackoutViewConstants.swift in Sources */,
+				4C8021F62B484650001E1262 /* BlackoutView.swift in Sources */,
+				4C8021F32B484650001E1262 /* AddBlackoutUseCase.swift in Sources */,
 				4CEB56842882742D00238D60 /* TimerCell.swift in Sources */,
 				4CCF2F9B2B437213003FCCF3 /* String+Extension.swift in Sources */,
+				4C8021F12B484650001E1262 /* BlackoutRepositoryProtocol.swift in Sources */,
 				4CC99BB2288446CB00C79B87 /* DayModel.swift in Sources */,
 				4CEB56A32882AB2000238D60 /* ProtocolCell.swift in Sources */,
 			);
@@ -908,6 +1028,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4C8021F82B48477D001E1262 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = exactVersion;
+				version = 2.3.1;
+			};
+		};
 		4CCF2F5C2B4369CD003FCCF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -919,6 +1047,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4C8021F92B48477D001E1262 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C8021F82B48477D001E1262 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
 		4CCF2F5D2B4369CD003FCCF3 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4CCF2F5C2B4369CD003FCCF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
